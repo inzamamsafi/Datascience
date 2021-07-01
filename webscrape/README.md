@@ -21,8 +21,11 @@ After running the _Flipkart_webscraper.ipynb_ you will get the dataset in csv fo
 This is the code thorugh which you will be able to predict the price of laptop using the specifiaction.
 In this code i did 3 work
   **A.** Data cleaning
+  
   **B.** Encoding
+  
     Becuase all the features where catorical and without encoding it is not possible to train our data.
+    
   **C.** Standarising, Spliting and training the data.
   
  # Final notes
