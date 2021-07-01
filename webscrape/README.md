@@ -25,7 +25,7 @@ In this code i did 3 work
     Becuase all the features where catorical and without encoding it is not possible to train our data.
   **C.** Standarising, Spliting and training the data.
   
- # ** Final notes:**
+ # Final notes
   
   I got the accuracy of 99%. This can furthure imporve with hypertuning and feature engineering.
 
