@@ -20,3 +20,8 @@ Instructions
 Please submit in the form of ipynb notebooks with/without ppts attached as you think necessary.
 
 Let us know if you have any questions.
+
+
+-------
+Train.csv is the data.
+Jupyter_notebook_Final_solution.ipynb is the final solution.
