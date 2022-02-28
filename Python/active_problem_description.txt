@@ -1,0 +1,57 @@
+An app X records for each user two kinds of status: 'active' or 'inactive'
+
+The column 'is_active' in the provided table tells us this status. is_active == 1 means the user is active and is_active == 0 means the user is inactive.
+
+To save storage space, the app stores the values of is_active only on dates when it gets changed.
+
+For example if a user's intial state was active on 1st. The user continued to remain active on 2nd, 3rd, 4th and then became inactive on 5th,. Now user remained inactive on 6th, 7th, 8th.
+ The user again gets active on 9th. 
+
+In this we will have 3 rows for the user in the original table.
+
+status_changed_by__date, is_active 
+
+2020-11-01, 1
+2020-11-05, 0
+2020-11-09, 1
+
+
+Can you retreive for each date from the start date to the last date of a user in the table, what was his status by expanding the above data ?
+Try to make the function as effecient as possible.
+
+
+Expected Format for the above
+
+status_changed_by__date, is_active 
+
+2020-11-01, 1
+2020-11-02, 1
+2020-11-03, 1
+2020-11-04, 1
+2020-11-05, 0
+2020-11-06, 0
+2020-11-07, 0
+2020-11-08, 0
+2020-11-09, 1
+
+
+Note you can have cases where there are multiple continuous records for the same state (active/inactive), so handle them in your logic accordingly. A multiple continuous record means the input case could be something like:
+
+status_changed_by__date, is_active 
+
+2020-11-01, 1
+2020-11-02, 1
+2020-11-05, 0
+2020-11-09, 1
+
+
+Here we did not need to actually store a record for 2nd but we still have it.
+
+You can expect to have other errors, as real world data is messy. In this case you can take appropriate assumptions and report them in your solution.
+
+
+Follow Up:
+----------
+Data gets updated everyday. Basically on each new date, for each user, if the user's status is changed a new record gets added to the table .In this case it becomes infeasible to run the logic on the complete historical data everytime. 
+Can you propose and write a way to make this logic incremental ?
+An incremental logic, is where you run the logic only on the new data and store necessary states from the old data.
